@@ -10,6 +10,7 @@ docker run -ti --name some-prestashop --network prestashop-net -e DB_SERVER=some
 docker exec -i -t 4a414a7bcb70 /bin/bash
 ```
 
+# Modificamos el docker de MySQL
 ```linux
 mysql -u root -px1234567890
 create database prestashop;
@@ -19,9 +20,19 @@ create database prestashop;
 la bd se llama : some-mysql
 ```
 
-
-
 ```linux
+la bd se llama : some-mysql
+```
+
+# Modificamos el docker de Prestashop
+```linux
+docker exec -i -t 4a414a7bcb70 /bin/bash
+rm -r install
+mv admin admin123
+```
+
+# Conectar desde Python
+```
 import requests
 import xmltodict
 
