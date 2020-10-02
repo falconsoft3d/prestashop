@@ -6,6 +6,20 @@ docker run -ti --name some-mysql --network prestashop-net -e MYSQL_ROOT_PASSWORD
 docker run -ti --name some-prestashop --network prestashop-net -e DB_SERVER=some-mysql -p 8080:80 -d prestashop/prestashop
 ```
 
+```linux
+docker exec -i -t 4a414a7bcb70 /bin/bash
+```
+
+```linux
+mysql -u root -px1234567890
+create database prestashop;
+```
+
+```linux
+la bd se llama : some-mysql
+```
+
+
 
 ```linux
 import requests
